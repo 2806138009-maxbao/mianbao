@@ -1,0 +1,997 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>萨拉伯尔 Seorabeol Beijing | Premium Korean Dining</title>
+    <meta name="description" content="萨拉伯尔 Seorabeol - High-end Korean Restaurant in Beijing. Authentic royal cuisine, charcoal BBQ, and traditional dining experience.">
+    
+    <style>
+        /* --- CSS VARIABLES & RESET (RESTORED: WARM LIGHT THEME) --- */
+        :root {
+            /* Palette - Warm & Noble */
+            --color-bg: #F5EFE5;       /* Warm off-white / Korean paper */
+            --color-bg-alt: #EBE4D8;   /* Slightly darker for contrast */
+            --color-dark: #3B2520;     /* Deep wood / charcoal brown */
+            --color-accent: #6E2B2B;   /* Muted wine red */
+            --color-gold: #C9A15D;     /* Elegant gold */
+            --color-white: #FFFFFF;
+            
+            /* Typography */
+            --font-serif: "Noto Serif", "Times New Roman", Georgia, serif;
+            --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", "Helvetica Neue", Arial, sans-serif;
+            --font-korean: "Malgun Gothic", "Apple SD Gothic Neo", sans-serif; 
+            
+            /* Spacing */
+            --spacing-sm: 1rem;
+            --spacing-md: 2rem;
+            --spacing-lg: 4rem;
+            --spacing-xl: 6rem;
+            
+            /* Transitions */
+            --transition-std: 0.3s ease;
+        }
+
+        /* --- HIDE DEFAULT SCROLLBAR --- */
+        ::-webkit-scrollbar { display: none; }
+        html { scrollbar-width: none; -ms-overflow-style: none; }
+
+        /* --- SELECTION STYLE --- */
+        ::selection { background-color: var(--color-gold); color: var(--color-dark); text-shadow: none; }
+        ::-moz-selection { background-color: var(--color-gold); color: var(--color-dark); text-shadow: none; }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; font-size: 16px; }
+        
+        body {
+            font-family: var(--font-sans); 
+            background-color: var(--color-bg); /* Restored Warm BG */
+            color: var(--color-dark); 
+            line-height: 1.6; 
+            overflow-x: hidden; 
+            cursor: none; 
+        }
+
+        /* Typography Helpers */
+        h1, h2, h3, h4 { font-family: var(--font-serif); font-weight: 700; color: var(--color-dark); }
+        
+        body[data-lang="ko"] h1, body[data-lang="ko"] h2, body[data-lang="ko"] h3, 
+        body[data-lang="ko"] h4, body[data-lang="ko"] .btn,
+        body[data-lang="ko"] .side-nav-label {
+            font-family: var(--font-korean); font-weight: 700; letter-spacing: -0.5px; 
+        }
+
+        p { color: #666; } /* Standard dark grey text for light mode */
+
+        a, button, input, select, textarea, label { cursor: none; text-decoration: none; color: inherit; transition: var(--transition-std); }
+        input, textarea { caret-color: var(--color-gold); }
+        ul { list-style: none; }
+        img { max-width: 100%; height: auto; display: block; }
+
+        /* --- CUSTOM CURSOR --- */
+        .custom-cursor {
+            position: fixed; top: 0; left: 0; width: 12px; height: 12px;
+            background-color: var(--color-gold); border-radius: 50%;
+            pointer-events: none; z-index: 9999;
+            transform: translate(-50%, -50%);
+            transition: width 0.3s ease, height 0.3s ease, background-color 0.3s ease, border 0.3s ease;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2); border: 1px solid rgba(255,255,255,0.5); 
+        }
+        .custom-cursor.hover-active {
+            width: 50px; height: 50px;
+            background-color: rgba(201, 161, 93, 0.15); border: 1px solid var(--color-gold);
+            box-shadow: 0 0 20px rgba(201, 161, 93, 0.3);
+        }
+        @media (pointer: coarse) {
+            body, a, button, input { cursor: auto; }
+            .custom-cursor { display: none; }
+        }
+        
+        /* --- GLOBAL PATTERN (Restored Wadang for Light Mode) --- */
+        .global-pattern {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            z-index: 2; pointer-events: none; 
+            opacity: 0.08; /* Good visibility on light background */
+            mix-blend-mode: normal; 
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg stroke='%23C9A15D' stroke-width='1.5'%3E%3Ccircle cx='50' cy='50' r='38' /%3E%3Ccircle cx='50' cy='50' r='32' /%3E%3Ccircle cx='50' cy='50' r='12' /%3E%3Ccircle cx='50' cy='50' r='5' fill='%23C9A15D' stroke='none' /%3E%3Ccircle cx='50' cy='22' r='3' fill='%23C9A15D' stroke='none' opacity='0.6' /%3E%3Ccircle cx='50' cy='78' r='3' fill='%23C9A15D' stroke='none' opacity='0.6' /%3E%3Ccircle cx='22' cy='50' r='3' fill='%23C9A15D' stroke='none' opacity='0.6' /%3E%3Ccircle cx='78' cy='50' r='3' fill='%23C9A15D' stroke='none' opacity='0.6' /%3E%3Cpath d='M50 32 Q 60 32 60 42' opacity='0.4' /%3E%3Cpath d='M50 68 Q 40 68 40 58' opacity='0.4' /%3E%3Cpath d='M68 50 Q 68 60 58 60' opacity='0.4' /%3E%3Cpath d='M32 50 Q 32 40 42 40' opacity='0.4' /%3E%3C/g%3E%3Ccircle cx='50' cy='2' r='2' fill='%23C9A15D' opacity='0.5' /%3E%3Ccircle cx='50' cy='98' r='2' fill='%23C9A15D' opacity='0.5' /%3E%3C/g%3E%3C/svg%3E");
+            background-size: 100px 100px; background-repeat: repeat;
+        }
+
+        /* --- HEADER & NAV --- */
+        .header {
+            position: fixed; top: 0; left: 0; width: 100%; z-index: 1000;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); padding: 1.2rem 0;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .header.scrolled {
+            background-color: rgba(59, 37, 32, 0.98); backdrop-filter: blur(10px);
+            padding: 0.6rem 0; box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+            border-bottom: 1px solid var(--color-gold); 
+        }
+        .nav-container {
+            display: flex; justify-content: space-between; align-items: center;
+            flex-wrap: nowrap; 
+        }
+        
+        .logo {
+            font-family: var(--font-serif); font-size: 1.6rem; font-weight: 700;
+            letter-spacing: 1px; display: flex; align-items: center; gap: 10px;
+            color: #FFF; white-space: nowrap; flex-shrink: 0;
+        }
+        .logo span {
+            font-size: 0.7rem; font-weight: 700; color: var(--color-dark);
+            background-color: var(--color-gold); padding: 3px 6px;
+            border-radius: 2px; font-family: "Malgun Gothic", sans-serif; letter-spacing: 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.3); border: 1px solid #fff; 
+        }
+
+        .header-actions { display: flex; align-items: center; gap: 1.5rem; }
+
+        .lang-switch {
+            font-family: var(--font-serif); font-size: 0.8rem; color: var(--color-gold);
+            border: 1px solid rgba(201, 161, 93, 0.5); padding: 4px 12px;
+            border-radius: 50px; transition: all 0.3s ease;
+            background: rgba(0,0,0,0.2); cursor: none; letter-spacing: 1px;
+            min-width: 60px; text-align: center; display: inline-block;
+        }
+        .lang-switch:hover {
+            background-color: var(--color-gold); color: var(--color-dark);
+            border-color: var(--color-gold); box-shadow: 0 0 15px rgba(201, 161, 93, 0.3);
+        }
+
+        .burger { 
+            display: flex; flex-direction: column; justify-content: center; align-items: flex-end;
+            cursor: pointer; width: 30px; height: 20px; z-index: 1001;
+        }
+        .burger div { 
+            height: 2px; background-color: var(--color-white); 
+            margin: 2px 0; transition: all 0.3s ease; 
+        }
+        .burger div:nth-child(1) { width: 30px; }
+        .burger div:nth-child(2) { width: 20px; }
+        .burger div:nth-child(3) { width: 10px; }
+        
+        .burger:hover div { width: 30px; background-color: var(--color-gold); }
+        .burger.toggle div:nth-child(1) { transform: rotate(-45deg) translate(-5px, 6px); width: 30px; }
+        .burger.toggle div:nth-child(2) { opacity: 0; }
+        .burger.toggle div:nth-child(3) { transform: rotate(45deg) translate(-5px, -6px); width: 30px; }
+
+        /* --- SIDE NAVIGATION --- */
+        .side-nav {
+            position: fixed; right: 20px; top: 50%; transform: translateY(-50%);
+            z-index: 2000; display: flex; flex-direction: column; align-items: flex-end; gap: 20px; 
+        }
+        .side-nav-item {
+            position: relative; display: flex; align-items: center; justify-content: flex-end;
+            height: 40px; cursor: none; 
+        }
+        .side-nav-label {
+            position: relative; margin-right: 15px; 
+            background-color: rgba(59, 37, 32, 0.9); 
+            color: var(--color-gold); padding: 2px 10px; border-radius: 2px;
+            font-size: 0.8rem; font-family: var(--font-serif); white-space: nowrap;
+            opacity: 0; visibility: hidden; transform: translateX(10px);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            pointer-events: none;
+        }
+        .side-nav.expanded .side-nav-label { opacity: 1; visibility: visible; transform: translateX(0); }
+        .side-nav-icon {
+            width: 6px; height: 6px; background-color: #C9A15D; 
+            transform: rotate(45deg); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 0 5px rgba(0,0,0,0.2); flex-shrink: 0; 
+        }
+        .side-nav-item:hover .side-nav-icon {
+            transform: rotate(45deg) scale(1.5); box-shadow: 0 0 10px rgba(201, 161, 93, 1);
+        }
+        .side-nav-item.active .side-nav-icon {
+            width: 30px; height: 30px; background-color: transparent; transform: rotate(0deg); 
+            background-image: url("data:image/svg+xml,%3Csvg width='24' height='48' viewBox='0 0 24 48' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 44C10 44 8 42 8 40C8 37 14 36 14 32C14 28 8 28 8 22C8 14 16 14 16 8C16 4 12 4 12 4' stroke='%23C9A15D' stroke-width='2.5' stroke-linecap='round'/%3E%3Ccircle cx='12' cy='44' r='2.5' fill='%23C9A15D'/%3E%3Crect x='10.5' y='2' width='3' height='3' transform='rotate(45 12 3.5)' fill='%23C9A15D'/%3E%3C/svg%3E");
+            background-size: contain; background-repeat: no-repeat; background-position: center;
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3)); 
+        }
+        .side-nav-item.active .side-nav-label { opacity: 1; visibility: visible; transform: translateX(0); color: #fff; }
+
+        /* --- SECTIONS & LAYOUT --- */
+        .container { width: 90%; max-width: 1200px; margin: 0 auto; padding: 0 var(--spacing-sm); position: relative; z-index: 10; }
+        .section { padding: var(--spacing-xl) 0; position: relative; z-index: 10; }
+        .text-center { text-align: center; }
+        
+        .section-header { text-align: center; margin-bottom: var(--spacing-lg); position: relative; }
+        .section-header h2 { font-size: 2.5rem; margin-bottom: 0.5rem; }
+        .section-header .subtitle { font-size: 1rem; color: var(--color-gold); text-transform: uppercase; letter-spacing: 2px; display: block; margin-bottom: 0.5rem; }
+        .section-header .korean-sub { font-size: 1.1rem; color: var(--color-accent); opacity: 0.8; font-family: var(--font-korean); }
+        .section-header::after { content: ''; display: block; width: 40px; height: 2px; background-color: var(--color-gold); margin: 1.5rem auto 0; }
+
+        /* Buttons */
+        .btn { display: inline-block; padding: 1rem 2.5rem; font-size: 1rem; letter-spacing: 1px; cursor: none; transition: all 0.3s ease; border: 1px solid transparent; text-transform: uppercase; font-weight: 600; position: relative; z-index: 20; }
+        .btn-primary { background-color: var(--color-accent); color: var(--color-white); }
+        .btn-primary:hover { background-color: var(--color-dark); transform: translateY(-2px); box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+        .btn-outline { background-color: transparent; border-color: var(--color-gold); color: var(--color-white); }
+        .btn-outline:hover { background-color: var(--color-gold); color: var(--color-dark); transform: translateY(-2px); }
+        .btn-outline-dark { border-color: var(--color-dark); color: var(--color-dark); }
+        .btn-outline-dark:hover { background-color: var(--color-dark); color: var(--color-white); }
+
+        /* Hero */
+        .hero { height: 100vh; width: 100%; display: flex; align-items: center; justify-content: center; text-align: left; position: relative; background: url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=1920&auto=format&fit=crop') center/cover no-repeat; z-index: 1; background-attachment: fixed; }
+        .hero-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: radial-gradient(circle at 30% 50%, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.85) 90%); backdrop-filter: blur(2px); -webkit-backdrop-filter: blur(2px); z-index: 1; }
+        /* Hero Bottom Gradient for transition */
+        .hero::after { content: ''; position: absolute; bottom: 0; left: 0; width: 100%; height: 180px; background: linear-gradient(to top, #F5EFE5 0%, rgba(245,239,229,0) 100%); z-index: 5; pointer-events: none; }
+
+        .hero-frame { position: absolute; top: 40px; left: 40px; right: 40px; bottom: 40px; border: 1px solid rgba(201, 161, 93, 0.3); z-index: 5; pointer-events: none; box-shadow: inset 0 0 60px rgba(0,0,0,0.6); }
+        .hero-content { position: relative; z-index: 10; color: var(--color-white); width: 90%; max-width: 1200px; padding: 0 1rem; }
+        .hero-logo { font-size: 1.4rem; margin-bottom: 1.5rem; color: var(--color-gold); letter-spacing: 4px; text-transform: uppercase; font-weight: 600; text-shadow: 0 2px 4px rgba(0,0,0,0.8); }
+        .hero-title { font-size: 4.5rem; margin-bottom: 1.5rem; line-height: 1.1; color: var(--color-white) !important; text-shadow: 0 4px 20px rgba(0,0,0,0.8); transition: text-shadow 0.4s ease, transform 0.4s ease, letter-spacing 0.4s ease; display: inline-block; }
+        .hero-title:hover { text-shadow: 0 0 15px rgba(255, 255, 255, 0.8), 0 0 30px rgba(201, 161, 93, 0.6); transform: scale(1.02); }
+        .hero-subtitle { font-size: 1.3rem; margin-bottom: 3rem; color: #f0f0f0; max-width: 700px; margin-left: 0; margin-right: 0; font-weight: 300; text-shadow: 0 2px 4px rgba(0,0,0,0.8); }
+        .hero-actions { display: flex; gap: 1rem; justify-content: flex-start; }
+
+        /* Cards (Restored Light Styles) */
+        .dish-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+        .dish-card { 
+            background-color: var(--color-white); 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08), 0 1px 3px rgba(0,0,0,0.05); 
+            transition: transform 0.3s ease, box-shadow 0.3s ease; 
+            overflow: hidden; border-bottom: 2px solid transparent; 
+            cursor: none; position: relative; z-index: 10; 
+            border: 1px solid rgba(0,0,0,0.02); 
+        }
+        .dish-card:hover { transform: translateY(-10px); box-shadow: 0 20px 50px rgba(59, 37, 32, 0.2); border-bottom-color: var(--color-accent); }
+        .image-placeholder { width: 100%; height: 250px; background-color: #ddd; background-size: cover; background-position: center; position: relative; }
+        .dish-info { padding: 1.5rem; text-align: center; }
+        .dish-name { font-size: 1.25rem; margin-bottom: 0.5rem; font-family: var(--font-serif); }
+        .dish-name span { display: block; font-size: 0.9rem; color: var(--color-accent); font-family: var(--font-sans); margin-top: 5px; }
+        .dish-desc { font-size: 0.9rem; color: #666; margin-bottom: 1rem; }
+        .tag { display: inline-block; padding: 4px 8px; font-size: 0.75rem; border: 1px solid var(--color-gold); color: var(--color-dark); margin-bottom: 1rem; }
+
+        .about-section { background-color: var(--color-white); position: relative; z-index: 10; }
+        .about-container { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+        .about-image { height: 500px; background: url('https://images.unsplash.com/photo-1552337975-65f7181df9a0?q=80&w=1000&auto=format&fit=crop') center/cover; position: relative; box-shadow: 20px 20px 0 rgba(201, 161, 93, 0.15), 0 10px 30px rgba(0,0,0,0.1); }
+        .about-image::before { content: ''; position: absolute; top: 20px; left: 20px; right: -20px; bottom: -20px; border: 1px solid var(--color-gold); z-index: 0; }
+        .about-text { position: relative; z-index: 1; }
+        .about-p { margin-bottom: 1.5rem; text-align: justify; }
+        .timeline { margin-top: 2rem; border-left: 1px solid var(--color-gold); padding-left: 1.5rem; }
+        .timeline-item { margin-bottom: 1rem; font-size: 0.9rem; }
+        .timeline-item strong { color: var(--color-accent); margin-right: 0.5rem; }
+
+        .menu-tabs { display: flex; justify-content: center; gap: 1rem; margin-bottom: 3rem; flex-wrap: wrap; position: relative; z-index: 20; }
+        .tab-btn { padding: 0.8rem 2rem; border: 1px solid var(--color-dark); background: transparent; cursor: none; font-family: var(--font-serif); font-size: 1rem; transition: all 0.3s; }
+        .tab-btn.active, .tab-btn:hover { background-color: var(--color-dark); color: var(--color-white); }
+        .menu-category { display: none; grid-template-columns: repeat(2, 1fr); gap: 2rem; animation: fadeIn 0.5s ease; }
+        .menu-category.active { display: grid; }
+        .menu-item { display: flex; justify-content: space-between; border-bottom: 1px dotted #ccc; padding-bottom: 1rem; }
+        .menu-item-details h4 { font-size: 1.2rem; margin-bottom: 0.25rem; }
+        .menu-item-details .sub { font-size: 0.9rem; color: #777; display: block; margin-bottom: 0.5rem; }
+        .menu-item-desc { font-size: 0.9rem; color: #555; }
+        .menu-price { font-family: var(--font-serif); font-size: 1.2rem; color: var(--color-accent); font-weight: 700; white-space: nowrap; margin-left: 1rem; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+        .exp-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-bottom: 3rem; }
+        .exp-img { height: 250px; background-size: cover; background-position: center; border-radius: 2px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); transition: transform 0.3s ease; }
+        .exp-img:hover { transform: scale(1.03); box-shadow: 0 15px 30px rgba(0,0,0,0.2); z-index: 1; }
+        .service-list { display: flex; justify-content: space-around; flex-wrap: wrap; margin-top: 2rem; text-align: center; }
+        .service-item { flex: 1; min-width: 200px; padding: 1rem; }
+        /* UPDATED: Removed Emojis from Service List */
+        .service-icon { font-size: 2rem; color: var(--color-gold); margin-bottom: 1rem; display: block; }
+
+        .reservation-section { background-color: var(--color-bg-alt); }
+        .res-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; }
+        .res-info h3 { margin-bottom: 1rem; color: var(--color-accent); }
+        .res-info p { margin-bottom: 1.5rem; }
+        .res-form { background-color: var(--color-white); padding: 2rem; box-shadow: 0 20px 60px rgba(0,0,0,0.1), 0 0 0 1px rgba(201, 161, 93, 0.1); border-top: 4px solid var(--color-accent); position: relative; z-index: 10; }
+        .form-group { margin-bottom: 1.2rem; }
+        .form-group label { display: block; margin-bottom: 0.5rem; font-size: 0.9rem; font-weight: 600; }
+        .form-control { width: 100%; padding: 0.8rem; border: 1px solid #ddd; background-color: #FAFAFA; font-family: var(--font-sans); font-size: 1rem; }
+        .form-control:focus { outline: none; border-color: var(--color-gold); background-color: #fff; }
+        .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+        .checkbox-group { display: flex; align-items: center; gap: 0.5rem; }
+        .checkbox-group input { width: auto; cursor: none; }
+
+        .location-card { background: var(--color-white); max-width: 800px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; box-shadow: 0 15px 40px rgba(0,0,0,0.08); position: relative; z-index: 10; border: 1px solid rgba(0,0,0,0.02); }
+        .loc-info { padding: 2rem; }
+        /* UPDATED: Removed Emojis from Location Info */
+        .loc-details p { margin-bottom: 0.8rem; display: flex; align-items: flex-start; gap: 0.5rem; }
+        .map-placeholder { background-color: #e0e0e0; min-height: 300px; display: flex; align-items: center; justify-content: center; color: #777; font-weight: bold; }
+        .social-links { margin-top: 1.5rem; display: flex; gap: 1rem; }
+        .social-icon { width: 30px; height: 30px; background-color: var(--color-dark); color: #fff; display: flex; align-items: center; justify-content: center; border-radius: 50%; font-size: 0.8rem; cursor: none; }
+
+        .footer { background-color: var(--color-dark); color: #aaa; padding: 4rem 0 2rem; font-size: 0.9rem; position: relative; z-index: 10; }
+        .footer-content { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 2rem; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 2rem; margin-bottom: 2rem; }
+        .footer-logo h3 { color: var(--color-white); margin-bottom: 0.5rem; }
+        .footer-links a { margin-left: 2rem; }
+        .footer-links a:hover { color: var(--color-gold); }
+        .copyright { text-align: center; font-size: 0.8rem; }
+
+        @media (max-width: 1199px) { .dish-grid, .exp-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 767px) {
+            .hero-title { font-size: 3rem; } .hero-subtitle { font-size: 1rem; } .section-header h2 { font-size: 1.8rem; }
+            .side-nav { display: none; } 
+            .dish-grid, .exp-grid, .about-container, .res-layout, .location-card, .menu-category, .form-row { grid-template-columns: 1fr; }
+            .hero-actions { flex-direction: column; align-items: stretch; }
+            .hero-frame { top: 20px; left: 20px; right: 20px; bottom: 20px; }
+            .about-image { height: 300px; margin-bottom: 2rem; }
+            .about-image::before { right: 10px; bottom: -10px; left: 10px; top: 10px; }
+            .menu-item { flex-direction: column; } .menu-price { margin-left: 0; margin-top: 0.5rem; }
+            .footer-content { flex-direction: column; text-align: center; } .footer-links a { margin: 0 0.5rem; display: inline-block; }
+        }
+    </style>
+</head>
+<body data-lang="zh">
+
+    <!-- CUSTOM CURSOR -->
+    <div class="custom-cursor" id="cursor"></div>
+    
+    <!-- GLOBAL PATTERN OVERLAY -->
+    <div class="global-pattern"></div>
+
+    <!-- SIDE SCROLL NAVIGATION -->
+    <nav class="side-nav" id="sideNav">
+        <!-- Filled by JS -->
+    </nav>
+
+    <!-- HEADER -->
+    <header class="header" id="header">
+        <div class="container nav-container">
+            <a href="#" class="logo" data-i18n="logo_text">
+                萨拉伯尔 <span>서라벌</span>
+            </a>
+            <div class="header-actions">
+                <button class="lang-switch" id="langToggle">中文</button>
+                <div class="burger" id="burger">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- SECTIONS -->
+    <section id="home" class="hero" data-i18n-nav="nav_home">
+        <div class="hero-overlay"></div>
+        <div class="hero-frame"></div>
+        <div class="hero-content">
+            <div class="hero-logo">Seorabeol · 서라벌</div>
+            <h1 class="hero-title" data-hover-text data-i18n="hero_title">新罗王都的餐桌<br>Heritage of Silla</h1>
+            <p class="hero-subtitle" data-i18n="hero_subtitle">
+                在北京燕莎地下，一席烤肉与韩定食，重现韩国古都的味道与礼仪。<br>
+                <span style="font-size: 0.9rem; display:block; margin-top:10px; color:#ccc;">
+                    Seorabeol brings the spirit of Korea’s ancient capital to Beijing with refined barbecue and traditional dining.
+                </span>
+            </p>
+            <div class="hero-actions">
+                <a href="#reservation" class="btn btn-primary" data-i18n="btn_book">立即订位 Reservation</a>
+                <a href="#menu" class="btn btn-outline" data-i18n="btn_menu">查看菜单 Menu</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="menu-preview" class="section" data-i18n-nav="sec_sig_title">
+        <div class="container">
+            <div class="section-header">
+                <span class="subtitle" data-i18n="sec_sig_sub">Seorabeol Signatures</span>
+                <h2 data-i18n="sec_sig_title">招牌菜 · Signature Dishes</h2>
+                <span class="korean-sub">대표 메뉴</span>
+            </div>
+            <div class="dish-grid">
+                <div class="dish-card">
+                    <div class="image-placeholder" style="background-image: url('https://images.unsplash.com/photo-1599804989608-6432bc085413?q=80&w=800&auto=format&fit=crop');"></div>
+                    <div class="dish-info">
+                        <span class="tag" data-i18n="tag_chef">主厨推荐 Chef's Choice</span>
+                        <h3 class="dish-name" data-i18n="dish_1_name">炭火烤牛排骨<br><span>Charcoal-grilled Galbi / 숯불 갈비</span></h3>
+                        <p class="dish-desc" data-i18n="dish_1_desc">选用顶级安格斯黑牛，秘制酱汁腌制48小时，果木炭火炙烤，锁住丰盈肉汁。</p>
+                    </div>
+                </div>
+                <div class="dish-card">
+                    <div class="image-placeholder" style="background-image: url('https://plus.unsplash.com/premium_photo-1694698540579-983194961579?q=80&w=800&auto=format&fit=crop');"></div>
+                    <div class="dish-info">
+                        <span class="tag" data-i18n="tag_classic">传统经典 Classic</span>
+                        <h3 class="dish-name" data-i18n="dish_2_name">宫廷神仙炉<br><span>Royal Sinseollo / 신선로</span></h3>
+                        <p class="dish-desc" data-i18n="dish_2_desc">源自朝鲜宫廷的豪华锅物，汇集山珍海味，汤底醇厚，象征团圆与富贵。</p>
+                    </div>
+                </div>
+                <div class="dish-card">
+                    <div class="image-placeholder" style="background-image: url('https://images.unsplash.com/photo-1553163147-622ab57be1c7?q=80&w=800&auto=format&fit=crop');"></div>
+                    <div class="dish-info">
+                        <span class="tag" data-i18n="tag_popular">人气必点 Popular</span>
+                        <h3 class="dish-name" data-i18n="dish_3_name">平壤冷面<br><span>Pyongyang Naengmyeon / 평양 냉면</span></h3>
+                        <p class="dish-desc" data-i18n="dish_3_desc">荞麦面条劲道爽滑，配以长时间熬制的清澈牛骨汤与梨汁，清凉解腻。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="section about-section" data-i18n-nav="nav_about">
+        <div class="container about-container">
+            <div class="about-image"></div>
+            <div class="about-text">
+                <div class="section-header" style="text-align: left; margin-bottom: 2rem;">
+                    <span class="subtitle" data-i18n="sec_about_sub">Our Story</span>
+                    <h2 data-i18n="sec_about_title">品牌故事 · About Us</h2>
+                    <span class="korean-sub">서라벌, 이야기</span>
+                </div>
+                <p class="about-p" data-i18n="about_p1">“萨拉伯尔（Seorabeol）”是韩国新罗王朝古都“庆州”的旧称，象征着千年的王室尊贵与饮食文化。作为北京最早的高端韩餐品牌之一，我们致力于将那份古老的礼仪与味道带到燕莎商圈。</p>
+                <p class="about-p" data-i18n="about_p2">我们坚持“食不厌精”，所有酱料均由拥有30年经验的韩籍主厨亲手酿制。无论是慢火熬制的牛骨汤，还是严选产地的时令蔬菜，都体现了我们对自然的敬畏和对客人的尊重。</p>
+                <div class="timeline">
+                    <div class="timeline-item"><strong data-i18n="year_1998">1998</strong> <span data-i18n="event_1998">北京首店开业，引入正宗韩式宫廷料理</span></div>
+                    <div class="timeline-item"><strong data-i18n="year_2015">2015</strong> <span data-i18n="event_2015">品牌全面升级，重塑新罗王都空间美学</span></div>
+                    <div class="timeline-item"><strong data-i18n="year_2023">2023</strong> <span data-i18n="event_2023">荣获必吃榜“年度推荐韩国料理餐厅”</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="menu" class="section" data-i18n-nav="nav_menu">
+        <div class="container">
+            <div class="section-header">
+                <span class="subtitle" data-i18n="sec_menu_sub">Exquisite Taste</span>
+                <h2 data-i18n="sec_menu_title">菜单 · Menu</h2>
+                <span class="korean-sub">한식의 정수</span>
+            </div>
+            <div class="menu-tabs">
+                <button class="tab-btn active" data-tab="bbq" data-i18n="tab_bbq">韩式烤肉 BBQ</button>
+                <button class="tab-btn" data-tab="set" data-i18n="tab_sets">韩定食 Sets</button>
+                <button class="tab-btn" data-tab="classics" data-i18n="tab_classics">经典热菜 Classics</button>
+                <button class="tab-btn" data-tab="staples" data-i18n="tab_staples">冷面与主食 Staples</button>
+            </div>
+            <div class="menu-category active" id="bbq">
+                <div class="menu-item">
+                    <div class="menu-item-details">
+                        <h4 data-i18n="menu_bbq_1">特级雪花牛肉 <span class="sub">Premium Marbled Beef / 눈꽃 등심</span></h4>
+                        <p class="menu-item-desc" data-i18n="menu_bbq_1_desc">大理石纹理丰富，入口即化，炭火烤制首选。</p>
+                    </div>
+                    <div class="menu-price">¥ 398</div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-details">
+                        <h4 data-i18n="menu_bbq_2">调味牛排骨 <span class="sub">Marinated Galbi / 양념 갈비</span></h4>
+                        <p class="menu-item-desc" data-i18n="menu_bbq_2_desc">萨拉伯尔秘制酱料腌制，甜咸适口。</p>
+                    </div>
+                    <div class="menu-price">¥ 268</div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-details">
+                        <h4 data-i18n="menu_bbq_3">厚切五花肉 <span class="sub">Thick Cut Pork Belly / 삼겹살</span></h4>
+                        <p class="menu-item-desc" data-i18n="menu_bbq_3_desc">严选黑猪肉，肥瘦相间，搭配生菜与大酱。</p>
+                    </div>
+                    <div class="menu-price">¥ 128</div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-details">
+                        <h4 data-i18n="menu_bbq_4">极品牛舌 <span class="sub">Premium Ox Tongue / 우설</span></h4>
+                        <p class="menu-item-desc" data-i18n="menu_bbq_4_desc">取牛舌最嫩部位，口感脆嫩弹牙。</p>
+                    </div>
+                    <div class="menu-price">¥ 188</div>
+                </div>
+            </div>
+            <div class="menu-category" id="set">
+                <div class="menu-item">
+                    <div class="menu-item-details">
+                        <h4 data-i18n="menu_set_1">新罗御膳 <span class="sub">Silla Royal Set / 신라 정식</span></h4>
+                        <p class="menu-item-desc" data-i18n="menu_set_1_desc">包含9道前菜、烤肉拼盘、神仙炉、主食与甜品。（2位起订）</p>
+                    </div>
+                    <div class="menu-price">¥ 680 / <span data-i18n="unit_person">位</span></div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-details">
+                        <h4 data-i18n="menu_set_2">商务午市定食 <span class="sub">Business Lunch Set / 런치 정식</span></h4>
+                        <p class="menu-item-desc" data-i18n="menu_set_2_desc">烤肉或炖汤主菜，搭配精致小菜与米饭。</p>
+                    </div>
+                    <div class="menu-price">¥ 158 / <span data-i18n="unit_person">位</span></div>
+                </div>
+            </div>
+            <div class="menu-category" id="classics">
+                <div class="menu-item">
+                    <div class="menu-item-details">
+                        <h4 data-i18n="menu_classic_1">海鲜葱饼 <span class="sub">Seafood Pancake / 해물 파전</span></h4>
+                        <p class="menu-item-desc" data-i18n="menu_classic_1_desc">满铺鱿鱼、虾仁与香葱，外酥里嫩。</p>
+                    </div>
+                    <div class="menu-price">¥ 88</div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-details">
+                        <h4 data-i18n="menu_classic_2">辣炖牛尾 <span class="sub">Spicy Braised Oxtail / 매운 꼬리찜</span></h4>
+                        <p class="menu-item-desc" data-i18n="menu_classic_2_desc">软烂脱骨，香辣入味，极佳的下酒菜。</p>
+                    </div>
+                    <div class="menu-price">¥ 220</div>
+                </div>
+            </div>
+             <div class="menu-category" id="staples">
+                <div class="menu-item">
+                    <div class="menu-item-details">
+                        <h4 data-i18n="menu_staple_1">全州石锅拌饭 <span class="sub">Jeonju Bibimbap / 돌솥 비빔밥</span></h4>
+                        <p class="menu-item-desc" data-i18n="menu_staple_1_desc">五色蔬菜搭配流心蛋，锅底锅巴焦香酥脆。</p>
+                    </div>
+                    <div class="menu-price">¥ 68</div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-details">
+                        <h4 data-i18n="menu_staple_2">传统参鸡汤 <span class="sub">Ginseng Chicken Soup / 삼계탕</span></h4>
+                        <p class="menu-item-desc" data-i18n="menu_staple_2_desc">整鸡腹中填入糯米、红枣与高丽参，滋补养生。</p>
+                    </div>
+                    <div class="menu-price">¥ 118</div>
+                </div>
+            </div>
+            <div class="text-center" style="margin-top: 3rem;">
+                <a href="#reservation" class="btn btn-outline-dark" data-i18n="btn_book_now">预订品尝 Book Now</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="section" style="background-color: var(--color-bg-alt);" data-i18n-nav="nav_exp">
+        <div class="container">
+            <div class="section-header">
+                <span class="subtitle" data-i18n="sec_exp_sub">Atmosphere</span>
+                <h2 data-i18n="sec_exp_title">用餐体验 · Experience</h2>
+                <span class="korean-sub">한옥, 한복, 그리고 한 상</span>
+            </div>
+            <div class="exp-grid">
+                <div class="exp-img" style="background-image: url('https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?q=80&w=800&auto=format&fit=crop');"></div>
+                <div class="exp-img" style="background-image: url('https://images.unsplash.com/photo-1559339352-11d035aa65de?q=80&w=800&auto=format&fit=crop');"></div>
+                <div class="exp-img" style="background-image: url('https://images.unsplash.com/photo-1635514569139-744fa0b25683?q=80&w=800&auto=format&fit=crop');"></div>
+            </div>
+            <div class="text-center" style="max-width: 800px; margin: 0 auto;">
+                <p style="margin-bottom: 2rem;" data-i18n="exp_desc">步入萨拉伯尔，仿佛穿越至古代新罗。温润的韩纸灯笼，精细的木质格栅，为您营造私密而典雅的用餐空间。无论是商务宴请还是家庭聚会，这里都是您的尊贵之选。</p>
+            </div>
+            <div class="service-list">
+                <div class="service-item">
+                    <span class="service-icon"></span>
+                    <h4 data-i18n="srv_1_title">韩服迎宾</h4>
+                    <p data-i18n="srv_1_desc">身着传统韩服的侍者，带您感受地道的韩式礼仪。</p>
+                </div>
+                <div class="service-item">
+                    <span class="service-icon"></span>
+                    <h4 data-i18n="srv_2_title">桌边烤肉</h4>
+                    <p data-i18n="srv_2_desc">专业侍者全程为您烤制，确保每一块肉都在最佳火候。</p>
+                </div>
+                <div class="service-item">
+                    <span class="service-icon"></span>
+                    <h4 data-i18n="srv_3_title">特别企划</h4>
+                    <p data-i18n="srv_3_desc">生日惊喜与节日限定菜单，为您定格每一个重要时刻。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="reservation" class="section reservation-section" data-i18n-nav="nav_res">
+        <div class="container">
+            <div class="section-header">
+                <span class="subtitle" data-i18n="sec_res_sub">Booking</span>
+                <h2 data-i18n="sec_res_title">预约与活动 · Reservation</h2>
+                <span class="korean-sub">예약 및 행사</span>
+            </div>
+            <div class="res-layout">
+                <div class="res-info">
+                    <h3 data-i18n="res_welcome">期待您的光临</h3>
+                    <p data-i18n="res_advice">为了提供更好的服务，建议您提前 1-2 天进行预订，特别是周末及节假日。</p>
+                    <p data-i18n="res_private">我们提供多种规格的包间（Private Rooms），适合 4-20 人的私密聚餐。</p>
+                    <div style="margin-top: 2rem; padding: 1.5rem; border: 1px solid var(--color-gold);">
+                        <h4 style="color: var(--color-dark); margin-bottom: 0.5rem;">Groups & Events</h4>
+                        <p style="font-size: 0.9rem; margin-bottom: 0;" data-i18n="res_events">承接公司年会、宝宝百日宴及家庭寿宴。我们提供定制化菜单与场地布置服务。<br>详情咨询：(+86) 010-6465-xxxx</p>
+                    </div>
+                </div>
+                <div class="res-form">
+                    <form id="bookingForm">
+                        <div class="form-group">
+                            <label data-i18n="form_name">姓名 Name</label>
+                            <input type="text" class="form-control" required placeholder="您的称呼" data-i18n-placeholder="holder_name">
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label data-i18n="form_phone">电话 Phone</label>
+                                <input type="tel" class="form-control" required placeholder="联系方式" data-i18n-placeholder="holder_phone">
+                            </div>
+                            <div class="form-group">
+                                <label data-i18n="form_guests">人数 Guests</label>
+                                <select class="form-control">
+                                    <option>2 人</option>
+                                    <option>3-4 人</option>
+                                    <option>5-8 人</option>
+                                    <option>8 人以上</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label data-i18n="form_date">日期 Date</label>
+                                <input type="date" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label data-i18n="form_time">时间 Time</label>
+                                <input type="time" class="form-control" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label data-i18n="form_store">门店 Store</label>
+                            <select class="form-control">
+                                <option data-i18n="store_bj">北京 · 燕莎店 (Yansha Branch)</option>
+                            </select>
+                        </div>
+                        <div class="form-group checkbox-group">
+                            <input type="checkbox" id="privateRoom">
+                            <label for="privateRoom" style="margin-bottom:0;" data-i18n="form_private">优先安排包间 / Private Room Requested</label>
+                        </div>
+                        <div class="form-group">
+                            <label data-i18n="form_note">备注 Special Requests</label>
+                            <textarea class="form-control" rows="3" placeholder="过敏忌口 / 生日纪念日等" data-i18n-placeholder="holder_note"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%;" data-i18n="btn_submit">提交预订 Request Booking</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="locations" class="section" data-i18n-nav="nav_loc">
+        <div class="container">
+            <div class="section-header">
+                <span class="subtitle" data-i18n="sec_loc_sub">Visit Us</span>
+                <h2 data-i18n="sec_loc_title">门店信息 · Locations</h2>
+            </div>
+            <div class="location-card">
+                <div class="loc-info">
+                    <h3 style="margin-bottom: 1rem;" data-i18n="store_name">北京 · 燕莎店</h3>
+                    <div class="loc-details">
+                        <p><strong data-i18n="loc_addr_label">地址：</strong><span data-i18n="loc_addr_val">北京市朝阳区亮马桥路 52 号 燕莎友谊商城 B1 层</span></p>
+                        <p><strong data-i18n="loc_tel_label">电话：</strong>(+86) 010-6465-1234</p>
+                        <p><strong data-i18n="loc_hours_label">营业时间：</strong><span data-i18n="loc_hours_val">每日 11:00 – 22:00 (Last Order 21:30)</span></p>
+                        <p><strong data-i18n="loc_biz_label">商务：</strong>info@seorabeol-bj.com</p>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" class="social-icon" title="WeChat">微</a>
+                        <a href="#" class="social-icon" title="Dianping">评</a>
+                        <a href="#" class="social-icon" title="Xiaohongshu">红</a>
+                    </div>
+                </div>
+                <div class="map-placeholder">
+                    Map Placeholder<br> (Baidu / Gaode Maps API)
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>萨拉伯尔 Seorabeol</h3>
+                    <p data-i18n="footer_tagline">新罗王都的味道 · Royal Korean Cuisine</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#about" data-i18n="nav_about">品牌故事</a>
+                    <a href="#menu" data-i18n="nav_menu">菜单</a>
+                    <a href="#reservation" data-i18n="nav_res">预约</a>
+                    <a href="#locations" data-i18n="nav_loc">门店</a>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2025 萨拉伯尔 Seorabeol Beijing. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const translations = {
+                zh: {
+                    logo_text: "萨拉伯尔 <span>서라벌</span>",
+                    nav_home: "首页", nav_about: "品牌故事", nav_menu: "菜单", nav_exp: "用餐体验", nav_res: "预约", nav_loc: "门店",
+                    hero_title: "新罗王都的餐桌<br>Heritage of Silla",
+                    hero_subtitle: "在北京燕莎地下，一席烤肉与韩定食，重现韩国古都的味道与礼仪。<br><span style='font-size: 0.9rem; display:block; margin-top:10px; color:#ddd;'>Seorabeol brings the spirit of Korea’s ancient capital to Beijing with refined barbecue and traditional dining.</span>",
+                    btn_book: "立即订位 Reservation", btn_menu: "查看菜单 Menu",
+                    sec_sig_sub: "Seorabeol Signatures", sec_sig_title: "招牌菜 · Signature Dishes",
+                    tag_chef: "主厨推荐 Chef's Choice", dish_1_name: "炭火烤牛排骨<br><span>Charcoal-grilled Galbi / 숯불 갈비</span>", dish_1_desc: "选用顶级安格斯黑牛，秘制酱汁腌制48小时，果木炭火炙烤，锁住丰盈肉汁。",
+                    tag_classic: "传统经典 Classic", dish_2_name: "宫廷神仙炉<br><span>Royal Sinseollo / 신선로</span>", dish_2_desc: "源自朝鲜宫廷的豪华锅物，汇集山珍海味，汤底醇厚，象征团圆与富贵。",
+                    tag_popular: "人气必点 Popular", dish_3_name: "平壤冷面<br><span>Pyongyang Naengmyeon / 평양 냉면</span>", dish_3_desc: "荞麦面条劲道爽滑，配以长时间熬制的清澈牛骨汤与梨汁，清凉解腻。",
+                    sec_about_sub: "Our Story", sec_about_title: "品牌故事 · About Us",
+                    about_p1: "“萨拉伯尔（Seorabeol）”是韩国新罗王朝古都“庆州”的旧称，象征着千年的王室尊贵与饮食文化。作为北京最早的高端韩餐品牌之一，我们致力于将那份古老的礼仪与味道带到燕莎商圈。",
+                    about_p2: "我们坚持“食不厌精”，所有酱料均由拥有30年经验的韩籍主厨亲手酿制。无论是慢火熬制的牛骨汤，还是严选产地的时令蔬菜，都体现了我们对自然的敬畏和对客人的尊重。",
+                    year_1998: "1998", event_1998: "北京首店开业，引入正宗韩式宫廷料理",
+                    year_2015: "2015", event_2015: "品牌全面升级，重塑新罗王都空间美学",
+                    year_2023: "2023", event_2023: "荣获必吃榜“年度推荐韩国料理餐厅”",
+                    sec_menu_sub: "Exquisite Taste", sec_menu_title: "菜单 · Menu",
+                    tab_bbq: "韩式烤肉 BBQ", tab_sets: "韩定食 Sets", tab_classics: "经典热菜 Classics", tab_staples: "冷面与主食 Staples",
+                    menu_bbq_1: "特级雪花牛肉 <span class='sub'>Premium Marbled Beef / 눈꽃 등심</span>", menu_bbq_1_desc: "大理石纹理丰富，入口即化，炭火烤制首选。",
+                    menu_bbq_2: "调味牛排骨 <span class='sub'>Marinated Galbi / 양념 갈비</span>", menu_bbq_2_desc: "萨拉伯尔秘制酱料腌制，甜咸适口。",
+                    menu_bbq_3: "厚切五花肉 <span class='sub'>Thick Cut Pork Belly / 삼겹살</span>", menu_bbq_3_desc: "严选黑猪肉，肥瘦相间，搭配生菜与大酱。",
+                    menu_bbq_4: "极品牛舌 <span class='sub'>Premium Ox Tongue / 우설</span>", menu_bbq_4_desc: "取牛舌最嫩部位，口感脆嫩弹牙。",
+                    menu_set_1: "新罗御膳 <span class='sub'>Silla Royal Set / 신라 정식</span>", menu_set_1_desc: "包含9道前菜、烤肉拼盘、神仙炉、主食与甜品。（2位起订）",
+                    menu_set_2: "商务午市定食 <span class='sub'>Business Lunch Set / 런치 정식</span>", menu_set_2_desc: "烤肉或炖汤主菜，搭配精致小菜与米饭。",
+                    unit_person: "位",
+                    menu_classic_1: "海鲜葱饼 <span class='sub'>Seafood Pancake / 해물 파전</span>", menu_classic_1_desc: "满铺鱿鱼、虾仁与香葱，外酥里嫩。",
+                    menu_classic_2: "辣炖牛尾 <span class='sub'>Spicy Braised Oxtail / 매운 꼬리찜</span>", menu_classic_2_desc: "软烂脱骨，香辣入味，极佳的下酒菜。",
+                    menu_staple_1: "全州石锅拌饭 <span class='sub'>Jeonju Bibimbap / 돌솥 비빔밥</span>", menu_staple_1_desc: "五色蔬菜搭配流心蛋，锅底锅巴焦香酥脆。",
+                    menu_staple_2: "传统参鸡汤 <span class='sub'>Ginseng Chicken Soup / 삼계탕</span>", menu_staple_2_desc: "整鸡腹中填入糯米、红枣与高丽参，滋补养生。",
+                    btn_book_now: "预订品尝 Book Now",
+                    sec_exp_sub: "Atmosphere", sec_exp_title: "用餐体验 · Experience",
+                    exp_desc: "步入萨拉伯尔，仿佛穿越至古代新罗。温润的韩纸灯笼，精细的木质格栅，为您营造私密而典雅的用餐空间。无论是商务宴请还是家庭聚会，这里都是您的尊贵之选。",
+                    srv_1_title: "韩服迎宾", srv_1_desc: "身着传统韩服的侍者，带您感受地道的韩式礼仪。",
+                    srv_2_title: "桌边烤肉", srv_2_desc: "专业侍者全程为您烤制，确保每一块肉都在最佳火候。",
+                    srv_3_title: "特别企划", srv_3_desc: "生日惊喜与节日限定菜单，为您定格每一个重要时刻。",
+                    sec_res_sub: "Booking", sec_res_title: "预约与活动 · Reservation",
+                    res_welcome: "期待您的光临", res_advice: "为了提供更好的服务，建议您提前 1-2 天进行预订，特别是周末及节假日。",
+                    res_private: "我们提供多种规格的包间（Private Rooms），适合 4-20 人的私密聚餐。",
+                    res_events: "承接公司年会、宝宝百日宴及家庭寿宴。我们提供定制化菜单与场地布置服务。<br>详情咨询：(+86) 010-6465-xxxx",
+                    form_name: "姓名 Name", holder_name: "您的称呼",
+                    form_phone: "电话 Phone", holder_phone: "联系方式",
+                    form_guests: "人数 Guests", form_date: "日期 Date", form_time: "时间 Time", form_store: "门店 Store",
+                    store_bj: "北京 · 燕莎店 (Yansha Branch)",
+                    form_private: "优先安排包间 / Private Room Requested",
+                    form_note: "备注 Special Requests", holder_note: "过敏忌口 / 生日纪念日等",
+                    btn_submit: "提交预订 Request Booking",
+                    sec_loc_sub: "Visit Us", sec_loc_title: "门店信息 · Locations",
+                    store_name: "北京 · 燕莎店",
+                    loc_addr_label: "地址：", loc_addr_val: "北京市朝阳区亮马桥路 52 号 燕莎友谊商城 B1 层",
+                    loc_tel_label: "电话：", loc_hours_label: "营业时间：", loc_hours_val: "每日 11:00 – 22:00 (Last Order 21:30)",
+                    loc_biz_label: "商务：",
+                    footer_tagline: "新罗王都的味道 · Royal Korean Cuisine"
+                },
+                en: {
+                    logo_text: "Seorabeol <span>서라벌</span>",
+                    nav_home: "Home", nav_about: "About", nav_menu: "Menu", nav_exp: "Experience", nav_res: "Book", nav_loc: "Locations",
+                    hero_title: "Royal Table of Silla<br>Heritage of Korea",
+                    hero_subtitle: "Experience the authentic taste and etiquette of Korea's ancient capital in Beijing.<br><span style='font-size: 0.9rem; display:block; margin-top:10px; color:#ddd;'>Seorabeol brings the spirit of Korea’s ancient capital to Beijing with refined barbecue and traditional dining.</span>",
+                    btn_book: "Reserve Now", btn_menu: "View Menu",
+                    sec_sig_sub: "Seorabeol Signatures", sec_sig_title: "Signature Dishes",
+                    tag_chef: "Chef's Choice", dish_1_name: "Charcoal-grilled Galbi<br><span>숯불 갈비</span>", dish_1_desc: "Premium Angus beef ribs, marinated for 48 hours in secret sauce, grilled over charcoal to lock in juices.",
+                    tag_classic: "Classic", dish_2_name: "Royal Sinseollo<br><span>신선로</span>", dish_2_desc: "A royal hot pot originating from the Joseon Dynasty, combining land and sea delicacies in a rich broth.",
+                    tag_popular: "Popular", dish_3_name: "Pyongyang Naengmyeon<br><span>평양 냉면</span>", dish_3_desc: "Chewy buckwheat noodles served in a clear, chilled beef broth with pear juice. Refreshing and clean.",
+                    sec_about_sub: "Our Story", sec_about_title: "About Seorabeol",
+                    about_p1: "\"Seorabeol\" was the ancient name for Gyeongju, the capital of the Silla Kingdom, symbolizing a thousand years of royal heritage. As one of Beijing's premier Korean dining brands, we bring ancient etiquette and taste to the Yansha district.",
+                    about_p2: "We believe in \"refinement in food.\" All sauces are handmade by our Korean head chef with 30 years of experience. From slow-simmered ox bone broth to carefully selected seasonal vegetables, we respect nature and our guests.",
+                    year_1998: "1998", event_1998: "First Beijing store opens, introducing authentic royal cuisine.",
+                    year_2015: "2015", event_2015: "Brand upgrade, reimagining the Silla aesthetic space.",
+                    year_2023: "2023", event_2023: "Awarded \"Recommended Korean Restaurant of the Year\".",
+                    sec_menu_sub: "Exquisite Taste", sec_menu_title: "Menu",
+                    tab_bbq: "Barbecue", tab_sets: "Hanjeongsik Sets", tab_classics: "Classics", tab_staples: "Noodles & Rice",
+                    menu_bbq_1: "Premium Marbled Beef <span class='sub'>눈꽃 등심</span>", menu_bbq_1_desc: "Rich marbling that melts in your mouth. The top choice for charcoal grilling.",
+                    menu_bbq_2: "Marinated Galbi <span class='sub'>양념 갈비</span>", menu_bbq_2_desc: "Marinated in Seorabeol's secret sauce. Perfectly sweet and savory.",
+                    menu_bbq_3: "Thick Cut Pork Belly <span class='sub'>삼겹살</span>", menu_bbq_3_desc: "Selected black pork, perfectly balanced fat, served with lettuce and soybean paste.",
+                    menu_bbq_4: "Premium Ox Tongue <span class='sub'>우설</span>", menu_bbq_4_desc: "The most tender cut of ox tongue, with a crisp and tender texture.",
+                    menu_set_1: "Silla Royal Set <span class='sub'>신라 정식</span>", menu_set_1_desc: "Includes 9 appetizers, BBQ platter, Sinseollo, main dish, and dessert. (Min 2 persons)",
+                    menu_set_2: "Business Lunch Set <span class='sub'>런치 정식</span>", menu_set_2_desc: "Choice of BBQ or stew main course, served with exquisite side dishes and rice.",
+                    unit_person: "pp",
+                    menu_classic_1: "Seafood Pancake <span class='sub'>해물 파전</span>", menu_classic_1_desc: "Topped with squid, shrimp, and scallions. Crispy outside, tender inside.",
+                    menu_classic_2: "Spicy Braised Oxtail <span class='sub'>매운 꼬리찜</span>", menu_classic_2_desc: "Tender meat falling off the bone, spicy and flavorful. Excellent with drinks.",
+                    menu_staple_1: "Jeonju Bibimbap <span class='sub'>돌솥 비빔밥</span>", menu_staple_1_desc: "Five-color vegetables with a soft-boiled egg. Crispy rice crust at the bottom.",
+                    menu_staple_2: "Ginseng Chicken Soup <span class='sub'>삼계탕</span>", menu_staple_2_desc: "Whole chicken stuffed with sticky rice, jujubes, and ginseng. Nourishing and healthy.",
+                    btn_book_now: "Book a Table",
+                    sec_exp_sub: "Atmosphere", sec_exp_title: "Dining Experience",
+                    exp_desc: "Stepping into Seorabeol is like traveling back to ancient Silla. Warm Hanji lamps and fine wooden lattices create a private and elegant dining space. Perfect for business banquets or family gatherings.",
+                    srv_1_title: "Hanbok Welcome", srv_1_desc: "Staff dressed in traditional Hanbok welcome you with authentic Korean etiquette.",
+                    srv_2_title: "Table-side Grilling", srv_2_desc: "Professional staff grill for you throughout the meal to ensure every piece of meat is perfect.",
+                    srv_3_title: "Special Events", srv_3_desc: "Birthday surprises and seasonal menus to capture your special moments.",
+                    sec_res_sub: "Booking", sec_res_title: "Reservation",
+                    res_welcome: "We Look Forward to Seeing You", res_advice: "We recommend booking 1-2 days in advance, especially for weekends and holidays.",
+                    res_private: "We offer various private rooms suitable for 4-20 people.",
+                    res_events: "We host company annual meetings, 100-day baby celebrations, and family banquets.<br>Inquiries: (+86) 010-6465-xxxx",
+                    form_name: "Name", holder_name: "Your Name",
+                    form_phone: "Phone", holder_phone: "Contact Number",
+                    form_guests: "Guests", form_date: "Date", form_time: "Time", form_store: "Store",
+                    store_bj: "Beijing Yansha Branch",
+                    form_private: "Private Room Requested",
+                    form_note: "Special Requests", holder_note: "Allergies / Anniversary, etc.",
+                    btn_submit: "Request Booking",
+                    sec_loc_sub: "Visit Us", sec_loc_title: "Locations",
+                    store_name: "Beijing Yansha Branch",
+                    loc_addr_label: "Addr:", loc_addr_val: "B1, Yansha Youyi Shopping City, 52 Liangmaqiao Rd, Chaoyang, Beijing",
+                    loc_tel_label: "Tel:", loc_hours_label: "Hours:", loc_hours_val: "Daily 11:00 – 22:00 (Last Order 21:30)",
+                    loc_biz_label: "Biz:",
+                    footer_tagline: "The Taste of Silla · Royal Korean Cuisine"
+                },
+                ko: {
+                    logo_text: "서라벌 <span>Seorabeol</span>",
+                    nav_home: "홈", nav_about: "브랜드 스토리", nav_menu: "메뉴", nav_exp: "다이닝", nav_res: "예약", nav_loc: "매장",
+                    hero_title: "신라의 식탁<br>Heritage of Silla",
+                    hero_subtitle: "베이징 옌사 지하에서 즐기는 정통 숯불구이와 한정식. 천년 고도 경주의 맛과 예를 재현합니다.<br><span style='font-size: 0.9rem; display:block; margin-top:10px; color:#ddd;'>Seorabeol brings the spirit of Korea’s ancient capital to Beijing with refined barbecue and traditional dining.</span>",
+                    btn_book: "예약하기", btn_menu: "메뉴 보기",
+                    sec_sig_sub: "Seorabeol Signatures", sec_sig_title: "대표 메뉴 · Signatures",
+                    tag_chef: "셰프 추천", dish_1_name: "숯불 갈비<br><span>Charcoal-grilled Galbi</span>", dish_1_desc: "최상급 앵거스 비프, 48시간 비법 양념 숙성, 참숯 직화로 육즙을 가득 가두었습니다.",
+                    tag_classic: "전통 클래식", dish_2_name: "신선로<br><span>Royal Sinseollo</span>", dish_2_desc: "조선 궁중에서 유래한 호화로운 전골 요리. 산해진미가 어우러진 깊은 맛.",
+                    tag_popular: "인기 메뉴", dish_3_name: "평양 냉면<br><span>Pyongyang Naengmyeon</span>", dish_3_desc: "메밀면의 구수함과 맑은 육수의 시원함. 오랜 시간 끓여낸 깊은 맛.",
+                    sec_about_sub: "Our Story", sec_about_title: "서라벌 이야기",
+                    about_p1: "'서라벌'은 신라의 수도 경주의 옛 이름으로, 천년 왕실의 품격과 음식 문화를 상징합니다. 베이징 초기 프리미엄 한식 브랜드로서, 우리는 그 고귀한 예와 맛을 전하고 있습니다.",
+                    about_p2: "우리는 '식불염정(食不厭精)'을 고집합니다. 모든 장은 30년 경력의 한국인 셰프가 직접 담급니다. 오랜 시간 끓인 육수부터 엄선된 제철 채소까지, 자연에 대한 경외와 손님에 대한 존중을 담았습니다.",
+                    year_1998: "1998", event_1998: "베이징 1호점 오픈, 정통 궁중 요리 도입",
+                    year_2015: "2015", event_2015: "브랜드 리뉴얼, 신라 왕도의 공간 미학 재현",
+                    year_2023: "2023", event_2023: "다이닝 가이드 '올해의 추천 한식당' 선정",
+                    sec_menu_sub: "Exquisite Taste", sec_menu_title: "메뉴 · Menu",
+                    tab_bbq: "숯불구이 BBQ", tab_sets: "한정식 Sets", tab_classics: "일품요리 Classics", tab_staples: "식사 Staples",
+                    menu_bbq_1: "눈꽃 등심 <span class='sub'>Premium Marbled Beef</span>", menu_bbq_1_desc: "풍부한 마블링, 입안에서 녹는 식감. 숯불구이의 최고봉.",
+                    menu_bbq_2: "양념 갈비 <span class='sub'>Marinated Galbi</span>", menu_bbq_2_desc: "서라벌만의 비법 양념으로 숙성시켜 달콤하고 짭짤한 맛의 조화.",
+                    menu_bbq_3: "삼겹살 <span class='sub'>Thick Cut Pork Belly</span>", menu_bbq_3_desc: "엄선된 흑돼지, 지방과 살코기의 완벽한 비율. 쌈과 된장을 곁들여 드세요.",
+                    menu_bbq_4: "우설 <span class='sub'>Premium Ox Tongue</span>", menu_bbq_4_desc: "가장 부드러운 부위만을 엄선하여 쫄깃하고 고소한 식감이 일품.",
+                    menu_set_1: "신라 정식 <span class='sub'>Silla Royal Set</span>", menu_set_1_desc: "전채요리 9종, 모둠 구이, 신선로, 식사 및 후식 포함. (2인 이상 주문 가능)",
+                    menu_set_2: "런치 정식 <span class='sub'>Business Lunch Set</span>", menu_set_2_desc: "구이 또는 찌개 메인 요리 선택, 정갈한 반찬과 밥 제공.",
+                    unit_person: "인",
+                    menu_classic_1: "해물 파전 <span class='sub'>Seafood Pancake</span>", menu_classic_1_desc: "오징어, 새우, 쪽파를 듬뿍 넣어 겉은 바삭하고 속은 촉촉합니다.",
+                    menu_classic_2: "매운 꼬리찜 <span class='sub'>Spicy Braised Oxtail</span>", menu_classic_2_desc: "부드럽게 뼈가 발라지는 식감, 매콤한 양념이 배어 최고의 안주가 됩니다.",
+                    menu_staple_1: "전주 돌솥 비빔밥 <span class='sub'>Jeonju Bibimbap</span>", menu_staple_1_desc: "오색 나물과 계란 노른자, 바닥에 눌어붙은 누룽지의 고소함.",
+                    menu_staple_2: "삼계탕 <span class='sub'>Ginseng Chicken Soup</span>", menu_staple_2_desc: "찹쌀, 대추, 고려인삼을 채워 넣은 보양식.",
+                    btn_book_now: "예약하기 Book Now",
+                    sec_exp_sub: "Atmosphere", sec_exp_title: "다이닝 경험 · Experience",
+                    exp_desc: "서라벌에 들어서는 순간 고대 신라로 시간 여행을 떠납니다. 은은한 한지 등과 섬세한 목조 격자는 프라이빗하고 우아한 공간을 선사합니다. 비즈니스 접대나 가족 모임에 품격을 더해 드립니다.",
+                    srv_1_title: "한복 맞이", srv_1_desc: "전통 한복을 입은 직원이 정통 예법으로 맞이합니다.",
+                    srv_2_title: "그릴링 서비스", srv_2_desc: "전문 직원이 고기를 가장 맛있는 상태로 구워드립니다.",
+                    srv_3_title: "특별 이벤트", srv_3_desc: "생일 서프라이즈와 명절 한정 메뉴로 소중한 순간을 기념하세요.",
+                    sec_res_sub: "Booking", sec_res_title: "예약 및 행사",
+                    res_welcome: "방문을 환영합니다", res_advice: "더 나은 서비스를 위해 주말 및 공휴일은 1-2일 전 예약을 권장합니다.",
+                    res_private: "4~20인을 위한 다양한 크기의 프라이빗 룸(Private Room)이 준비되어 있습니다.",
+                    res_events: "기업 연회, 돌잔치, 가족 연회 예약 가능. 맞춤형 메뉴와 장소 세팅을 제공합니다.<br>문의: (+86) 010-6465-xxxx",
+                    form_name: "성함 Name", holder_name: "성함을 입력해주세요",
+                    form_phone: "연락처 Phone", holder_phone: "연락처를 입력해주세요",
+                    form_guests: "인원 Guests", form_date: "날짜 Date", form_time: "시간 Time", form_store: "매장 Store",
+                    store_bj: "베이징 옌사점",
+                    form_private: "룸 예약 희망 / Private Room",
+                    form_note: "요청사항 Special Requests", holder_note: "알레르기 / 기념일 등",
+                    btn_submit: "예약 신청하기 Request",
+                    sec_loc_sub: "Visit Us", sec_loc_title: "매장 정보 · Locations",
+                    store_name: "베이징 옌사점",
+                    loc_addr_label: "📍 주소:", loc_addr_val: "베이징 차오양구 량마차오로 52 옌사우의쇼핑센터 B1",
+                    loc_tel_label: "📞 전화:", loc_hours_label: "⏰ 영업:", loc_hours_val: "매일 11:00 – 22:00 (라스트 오더 21:30)",
+                    loc_biz_label: "✉️ 비즈니스:",
+                    footer_tagline: "신라 왕도의 맛 · Royal Korean Cuisine"
+                }
+            };
+
+            // --- LANGUAGE SWITCHER LOGIC ---
+            const langToggleBtn = document.getElementById('langToggle');
+            let currentLang = 'zh';
+            const langOrder = ['zh', 'en', 'ko'];
+            const langLabels = {
+                'zh': '中文',
+                'en': 'EN',
+                'ko': '한국어'
+            };
+
+            function setLanguage(lang) {
+                document.body.setAttribute('data-lang', lang);
+                langToggleBtn.textContent = langLabels[lang];
+                
+                const elements = document.querySelectorAll('[data-i18n]');
+                elements.forEach(el => {
+                    const key = el.getAttribute('data-i18n');
+                    if (translations[lang][key]) {
+                        el.innerHTML = translations[lang][key];
+                    }
+                });
+
+                const inputs = document.querySelectorAll('[data-i18n-placeholder]');
+                inputs.forEach(el => {
+                    const key = el.getAttribute('data-i18n-placeholder');
+                    if (translations[lang][key]) {
+                        el.placeholder = translations[lang][key];
+                    }
+                });
+                
+                const sideLabels = document.querySelectorAll('.side-nav-label');
+                sideLabels.forEach(label => {
+                    const key = label.getAttribute('data-i18n');
+                    if (translations[lang][key]) {
+                         label.innerHTML = translations[lang][key];
+                    }
+                });
+
+                currentLang = lang;
+            }
+
+            langToggleBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                const currentIndex = langOrder.indexOf(currentLang);
+                const nextIndex = (currentIndex + 1) % langOrder.length;
+                setLanguage(langOrder[nextIndex]);
+            });
+            
+            // Initialize
+            setLanguage('zh');
+
+            // --- EXISTING INTERACTIONS ---
+            
+            const header = document.getElementById('header');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+            });
+
+            const burger = document.getElementById('burger');
+            const sideNav = document.getElementById('sideNav');
+
+            burger.addEventListener('click', () => {
+                burger.classList.toggle('toggle');
+                sideNav.classList.toggle('expanded');
+            });
+
+            const tabBtns = document.querySelectorAll('.tab-btn');
+            const menuCategories = document.querySelectorAll('.menu-category');
+
+            tabBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    tabBtns.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    menuCategories.forEach(cat => cat.classList.remove('active'));
+                    const targetId = btn.getAttribute('data-tab');
+                    document.getElementById(targetId).classList.add('active');
+                });
+            });
+
+            const form = document.getElementById('bookingForm');
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const msgs = {
+                    zh: "预约请求已提交！\n\n感谢您选择萨拉伯尔。\n我们会尽快致电您确认具体的用餐安排。",
+                    en: "Reservation request submitted!\n\nThank you for choosing Seorabeol.\nWe will call you shortly to confirm your booking.",
+                    ko: "예약 요청이 접수되었습니다!\n\n서라벌을 선택해 주셔서 감사합니다.\n곧 전화로 예약을 확정해 드리겠습니다."
+                };
+                alert(msgs[currentLang]);
+                form.reset();
+            });
+
+            const cursor = document.getElementById('cursor');
+            const hoverElements = document.querySelectorAll('a, button, .btn, .dish-card, input, select, textarea, .social-icon, .hero-title');
+
+            if (window.matchMedia("(pointer: fine)").matches) {
+                document.addEventListener('mousemove', (e) => {
+                    cursor.style.left = e.clientX + 'px';
+                    cursor.style.top = e.clientY + 'px';
+                });
+                hoverElements.forEach(el => {
+                    el.addEventListener('mouseenter', () => cursor.classList.add('hover-active'));
+                    el.addEventListener('mouseleave', () => cursor.classList.remove('hover-active'));
+                });
+                document.addEventListener('mousedown', () => cursor.style.transform = "translate(-50%, -50%) scale(0.8)");
+                document.addEventListener('mouseup', () => cursor.style.transform = "translate(-50%, -50%) scale(1)");
+            }
+
+            const sections = document.querySelectorAll('section[id]');
+            sideNav.innerHTML = '';
+
+            sections.forEach(section => {
+                const link = document.createElement('a');
+                link.href = `#${section.id}`;
+                link.className = 'side-nav-item';
+                
+                const label = document.createElement('span');
+                label.className = 'side-nav-label';
+                const i18nKey = section.getAttribute('data-i18n-nav');
+                if(i18nKey) {
+                    label.setAttribute('data-i18n', i18nKey);
+                    label.textContent = translations[currentLang][i18nKey] || i18nKey;
+                } else {
+                    label.textContent = section.id;
+                }
+                link.appendChild(label);
+
+                const icon = document.createElement('div');
+                icon.className = 'side-nav-icon';
+                link.appendChild(icon);
+
+                sideNav.appendChild(link);
+            });
+
+            window.addEventListener('scroll', () => {
+                let current = '';
+                
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.clientHeight;
+                    if (pageYOffset >= (sectionTop - 300)) {
+                        current = section.id;
+                    }
+                });
+
+                document.querySelectorAll('.side-nav-item').forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === `#${current}`) {
+                        link.classList.add('active');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
